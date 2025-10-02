@@ -1,0 +1,48 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border-radius: var(--border-radius-m);
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--color-black)
+}
+
+.card a:hover .card--title {
+  color: var(--color-blue);
+}
+
+.card--img {
+  width: 100%;
+  display: flex;
+}
+
+.card--img img{
+  border-radius: var(--border-radius-m);
+}
+
+.card--title {
+  margin: 15px 0 5px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card--price {
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 10px;
+}
+
+.card--desc-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+.card--desc {
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-gray);
+}

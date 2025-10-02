@@ -1,13 +1,258 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --color-white: #ffffff;
+  --color-black: #0A143A;
+
+  --color-blue: #256EEB;
+  --color-gray: #C4C4C4;
+  --color-gray-light: #E5E5E5;
+
+  --border-radius-m: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
+.btn {
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background-color: transparent;
+}
+
+.btn-primary {
+  color: var(--color-white);
+  background-color: var(--color-blue);
+}
+
+.btn-large {
+  padding: 19px 72px;
+}
+
+.search {
+  margin-bottom: 45px;
+}
+
+.search-box {
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--color-blue);
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.search-box input {
+  flex-grow: 1;
+  padding: 14px 22px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  min-width: 0;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  column-gap: 2px;
+}
+
+.search-btn .search-btn__text {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.content {
+  padding-bottom: 50px;
+}
+
+.content-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.content-main {
+  flex-grow: 1;
+}
+
+.content-side {
+  width: 260px;
+  min-width: 260px;
+}
+
+.content-main__title {
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0 0 25px;
+}
+
+.content-main__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.content-side__title {
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0 0 23px;
+}
+
+.content-side__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  row-gap: 25px;
+  border-bottom: 1px solid var(--color-gray-light);
+  padding: 0 0 36px;
+  margin-bottom: 36px;
+}
+
+.content-side__list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.content-side__list-item--title {
+  margin: 7px 0 5px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.content-side__list-item--text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.content-side__footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.content-side__footer--item {
+  margin: 0;
+  color: var(--color-gray);
+  font-size: 14px;
+  line-height: 16px;
+}
+
+a.content-side__footer--item:hover {
+  color: var(--color-gray-light);
+}
+
+.content-product {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  gap: 30px;
+}
+
+.content-product__left,
+.content-product__right {
+  flex-basis: 50%;
+}
+
+.content-product__title,
+.content-product__price {
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0 0 25px;
+}
+
+.content-product__img {
+  width: 100%;
+  border-radius: var(--border-radius-m);
+}
+
+.content-product__text {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 930px;
+  }
+
+  .content-main__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 730px;
+  }
+
+  .content-box {
+    flex-direction: column;
+  }
+
+  .content-main {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .content-side {
+    width: 100%;
+  }
+
+  .content-product {
+    flex-direction: column;
+  }
+
+  .content-product__left,
+  .content-product__right {
+    flex-basis: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .search-btn .search-btn__text {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .content-main__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

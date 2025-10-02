@@ -1,0 +1,42 @@
+.header {
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
+
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  column-gap: 6px;
+  text-decoration: none;
+}
+
+.header-logo span {
+  line-height: 28px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.header-burger {
+  width: 30px;
+  height: 19px;
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .header-controls {
+    display: none;
+  }
+
+  .header-burger {
+    display: block;
+  }
+}
