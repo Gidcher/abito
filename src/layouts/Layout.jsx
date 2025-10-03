@@ -42,7 +42,7 @@ export const Layout = () => {
               >
                 <img
                   className="search-btn__icon"
-                  src="/image/search.svg"
+                  src="/images/search.svg"
                   alt="search"
                   width="15px"
                   height="15px"

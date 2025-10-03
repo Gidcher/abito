@@ -8,7 +8,7 @@ export const Header = () => {
         <div className="header-box">
           <Link to={'/'} className="header-logo">
             <img
-              src="/image/logo.svg"
+              src="/images/logo.svg"
               alt="logo"
             />
             <span>Abito</span>

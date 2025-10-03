@@ -42,7 +42,7 @@ export const Home = () => {
                     <li className="content-side__list-item">
                       <img
                         className="content-side__list-item--image"
-                        src="/image/services/delivery.svg"
+                        src="/images/services/delivery.svg"
                         alt="delivery"
                       />
                         <h5 className="content-side__list-item--title">
@@ -55,7 +55,7 @@ export const Home = () => {
                     <li className="content-side__list-item">
                       <img
                         className="content-side__list-item--image"
-                        src="/image/services/car.svg"
+                        src="/images/services/car.svg"
                         alt="car"
                       />
                         <h5 className="content-side__list-item--title">
@@ -68,7 +68,7 @@ export const Home = () => {
                     <li className="content-side__list-item">
                       <img
                         className="content-side__list-item--image"
-                        src="/image/services/house.svg"
+                        src="/images/services/house.svg"
                         alt="house"
                       />
                         <h5 className="content-side__list-item--title">
